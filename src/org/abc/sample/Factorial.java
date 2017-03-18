@@ -13,6 +13,11 @@ public class Factorial {
 		scanner.close();
 	}
 
+	/**
+	 * Method that is called recursively for calculating factorial
+	 * @param number
+	 * @return
+	 */
 	private static int factorial(int number) {
 		if (number == 0) {
 			return 1;

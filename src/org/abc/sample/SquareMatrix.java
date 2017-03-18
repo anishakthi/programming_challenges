@@ -4,7 +4,9 @@ public class SquareMatrix {
 	public static void main(String[] args) {
 		int primaryDiagonalSum = 0;
 		int secondaryDiagonalSum = 0;
+		
 		int[][] sqMatrix = new int[][] {{5,6,7,8},{1,2,5,4},{1,2,3,6},{6,2,3,6}};
+		// Calculating Primary Diagonal sum.
 		System.out.print("Primary Diagonal elements are ");
 		for(int i = 0; i< sqMatrix.length ; i++) {
 			int[] row = sqMatrix[i];
@@ -13,6 +15,7 @@ public class SquareMatrix {
 		}
 		System.out.println(" Their Sum is  "+ primaryDiagonalSum);
 		
+		// Calculating Secondary Diagonal sum.
 		System.out.print("Secondary diagonal elements are ");
 		int size = sqMatrix.length-1;
 		for(int i = 0; i < sqMatrix.length; i++) {
@@ -23,6 +26,7 @@ public class SquareMatrix {
 		}
 		System.out.println(" Their Sum is  "+ secondaryDiagonalSum);
 		
+		// Calculating Absolute difference.
 		int difference = primaryDiagonalSum - secondaryDiagonalSum;
 		difference = difference < 0 ? -difference : difference;
 		System.out.println("Absolute difference is " + difference);
