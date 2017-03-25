@@ -1,18 +1,19 @@
 package org.abc.sample;
 
-import java.util.LinkedList;
+import java.util.List;
+import java.util.ArrayList;
 
 public class LinkedListPrint {
 	
 	public static void main(String[] args) {
 		
 		// constructing a linked list
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		List<Node> linkedList = new ArrayList<Node>();
 		// 10 indicate the size of the list and also the data in the node is added from 1 to 10.
 		buildLinkedList(linkedList, null, 10);
 		
 		// Printing the linked list
-		System.out.print("Linked List is " + linkedList.getLast().getData()); // got last value from the list as the first element is inserted as last element
+		System.out.print("Linked List is " + linkedList.get(linkedList.size() -1).getData()); // got last value from the list as the first element is inserted as last element
 		for(int i=1; i<linkedList.size() ; i++) {
 			Node node = linkedList.get(linkedList.size()-i);
 			System.out.print(" -> " + getNextNode(node));
@@ -26,7 +27,7 @@ public class LinkedListPrint {
 	 * @param data - input data. This also indicate the size of the list.
 	 * @return
 	 */
-	private static LinkedList<Node> buildLinkedList(LinkedList<Node> linkedList, Node nextNode, int data) {
+	private static List<Node> buildLinkedList(List<Node> linkedList, Node nextNode, int data) {
 			if(data <= 0) {
 			return linkedList; 
 			} else {
